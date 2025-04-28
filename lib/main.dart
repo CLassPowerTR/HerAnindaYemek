@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'features/auth/domain/auth_provider.dart';
-import 'features/auth/presentation/screens/login_screen.dart';
 import 'core/theme/app_theme.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
+import 'core/router/app_router.dart';
 
 void main() {
   runApp(MyApp());
@@ -16,7 +16,7 @@ class MyApp extends StatelessWidget {
       providers: [
         ChangeNotifierProvider(create: (_) => AuthProvider()),
       ],
-      child: MaterialApp(
+      child: MaterialApp.router(
         title: 'Flutter Demo',
         theme: AppTheme.lightTheme,
         darkTheme: AppTheme.darkTheme,
@@ -31,7 +31,7 @@ class MyApp extends StatelessWidget {
           const Locale('tr', ''), // Türkçe
           // Diğer diller
         ],
-        home: LoginScreen(),
+        routerConfig: AppRouter.router,
       ),
     );
   }

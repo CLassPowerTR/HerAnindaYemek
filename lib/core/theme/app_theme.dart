@@ -4,6 +4,7 @@ class AppTheme {
   static final ThemeData lightTheme = ThemeData(
     brightness: Brightness.light,
     primarySwatch: Colors.blue,
+
     // Diğer light tema ayarları
   );
 
