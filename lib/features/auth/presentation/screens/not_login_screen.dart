@@ -34,11 +34,14 @@ class NotLoginScreen extends StatelessWidget {
               maxLines: 3,
               softWrap: true,
               headerText,
-              style: TextStyle(fontSize: 36, fontWeight: FontWeight.w700),
+              style: TextStyle(
+                  fontSize: 36,
+                  fontWeight: FontWeight.w700,
+                  color: Colors.black),
             ),
           ),
           Positioned(
-            bottom: 20,
+            bottom: MediaQuery.of(context).size.height * 0.1,
             child: Container(
               margin: EdgeInsets.symmetric(
                   horizontal: MediaQuery.of(context).size.width * 0.05),

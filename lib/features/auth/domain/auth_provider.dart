@@ -25,7 +25,7 @@ class AuthProvider with ChangeNotifier {
     notifyListeners();
   }
 
-  Future<void> register(String username, String password) async {
+  Future<void> register(String username, String password, String email) async {
     // Kayıt işlemi
     notifyListeners();
   }
